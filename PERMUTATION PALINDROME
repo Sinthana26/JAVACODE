@@ -1,0 +1,40 @@
+import java.util.*;
+class HelloWorld {
+    public static void main(String[] args) {
+       String str="malay2aalM";
+       if(isPal(str))
+       {
+           System.out.println("true");
+       }
+       else
+       {
+           System.out.println("false");
+       }
+    }
+    public static boolean isPal(String str){
+        int count[]=new int[26];
+        int oddCount=0;
+        
+        for(char s:str.toCharArray())
+        {
+        if(Character.isLetter(s))
+        {
+            s=Character.toLowerCase(s);
+            count[s-'a']++;
+        } 
+        } for(int c:count)
+        {
+        if(c%2!=0)
+        {
+        oddCount++;
+    }
+        }
+           if(oddCount>1)
+           {
+               return false;
+           }
+        return true;
+        
+    }
+    
+}

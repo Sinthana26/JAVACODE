@@ -1,0 +1,21 @@
+class HelloWorld {
+    public static void main(String[] args) {
+     int[] dp = new int(a.length)
+     int maxi=1
+     for(int i=0;i<a.length;i++)
+     {
+         dp[i]=1;
+     }
+    for(i=1;i<a.length;i++)
+    {
+        for(int j=0;j<i;j++)
+        {
+            if(a[j]<a[i])
+            dp[i]=Math.max(dp[i],dp[j]+1);
+        }
+        maxi=Math.max(maxi.dp[i]);
+    }
+    return max>1;
+    }
+    public static int saipallavi(a))
+                

@@ -1,0 +1,33 @@
+import java.util.*;
+class HelloWorld {
+    public static boolean Binarysearch(int[] a, int low, int high, int target) {
+        while (low <= high) {
+            int mid = low + (high - low) / 2;  
+
+            if (a[mid] == target) {
+                return true; 
+            }
+            else if (a[mid] > target) {
+                high = mid - 1; 
+            } else {
+                low = mid + 1;   
+            }
+        }
+        return false; 
+    }
+    public static void main(String[] args) {
+        int[] a = {100, 90, 40, 60, 20, 50, 70, 80};
+        Arrays.sort(a);
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the element to find: ");
+        int target = sc.nextInt();
+        boolean result = Binarysearch(a, 0, a.length - 1, target);
+        if (result) {
+            System.out.println("Element found!");
+        } else {
+            System.out.println("Element not found!");
+        }
+        
+        sc.close();  
+    }
+}

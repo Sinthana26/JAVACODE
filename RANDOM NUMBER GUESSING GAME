@@ -1,0 +1,77 @@
+import java.util.*;
+
+class Main {
+    public static void main(String[] args) {
+        Random r = new Random();  
+        List<Integer> list = new ArrayList<>();
+        
+        // Generate a list of 5 unique random numbers between 1 and 10
+        while (list.size() != 5) {  
+            int a = r.nextInt(10) + 1;  
+            if (!list.contains(a)) { 
+                list.add(a); 
+            }
+        }
+        
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the name of team player 1:");
+        String str1 = sc.nextLine();
+        System.out.println("Enter the name of team player 2:");
+        String str2 = sc.nextLine();
+
+        // Initialize the players' guess lists
+        List<Integer> p1Guess = new ArrayList<>();
+        List<Integer> p2Guess = new ArrayList<>();
+        
+        // Initialize scores
+        int p1Score = 0;
+        int p2Score = 0;
+        
+        // Game loop for 3 rounds of guesses
+        for (int i = 0; i < 3; i++) {  
+            // Player 1's turn
+            System.out.println(str1 + ", enter your guess:");
+            int g1 = sc.nextInt();
+            while (p1Guess.contains(g1) || p2Guess.contains(g1)) {
+                System.out.println("This number has already been guessed. Enter another number:");
+                g1 = sc.nextInt();
+            }
+            p1Guess.add(g1);  
+            if (list.contains(g1)) {
+                System.out.println("Correct guess by " + str1);
+                p1Score++;  // Increment player 1's score for a correct guess
+            } else {
+                System.out.println("Wrong guess by " + str1);
+            }
+
+            // Player 2's turn
+            System.out.println(str2 + ", enter your guess:");
+            int g2 = sc.nextInt();
+            while (p1Guess.contains(g2) || p2Guess.contains(g2)) {
+                System.out.println("This number has already been guessed. Enter another number:");
+                g2 = sc.nextInt();
+            }
+            p2Guess.add(g2);  
+            if (list.contains(g2)) {
+                System.out.println("Correct guess by " + str2);
+                p2Score++;  // Increment player 2's score for a correct guess
+            } else {
+                System.out.println("Wrong guess by " + str2);
+            }
+        }
+
+        // Display final scores
+        System.out.println("\nFinal Scores:");
+        System.out.println(str1 + " score: " + p1Score);
+        System.out.println(str2 + " score: " + p2Score);
+        
+        // Determine the winner
+        if (p1Score > p2Score) {
+            System.out.println(str1 + " wins!");
+        } else if (p2Score > p1Score) {
+            System.out.println(str2 + " wins!");
+        } else {
+            System.out.println("It's a tie!");
+        }
+    }
+}

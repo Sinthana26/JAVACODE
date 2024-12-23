@@ -1,0 +1,32 @@
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter the size of matrix (n x n): ");
+        int n = scanner.nextInt();
+        int[][] matrix = new int[n][n];
+        System.out.println("Enter the matrix elements:");
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                matrix[i][j] = scanner.nextInt();
+            }
+        }
+        int scalarValue = matrix[0][0]; 
+        boolean isScalar = true;
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                if ((i == j && matrix[i][j] != scalarValue) || (i != j && matrix[i][j] != 0)) {
+                    isScalar = false;
+                    break;
+                }
+            }
+            if (!isScalar) break; 
+        }
+        if (isScalar) {
+            System.out.println("The given matrix is a Scalar Matrix.");
+        } else {
+            System.out.println("The given matrix is NOT a Scalar Matrix.");
+        }
+           scanner.close();
+    }
+}

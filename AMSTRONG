@@ -1,0 +1,16 @@
+import java.util.Scanner;
+public class demo {
+    public static void main(String[] args) {
+        Scanner io = new Scanner(System.in);       
+        int a=io.nextInt();
+        int b=a;
+        int sum=0;
+        int n=String.valueOf(a).length();
+        while(a!=0){
+            int rem=a%10;
+            sum+=Math.pow(rem, n);
+            a/=10;
+        }
+        System.out.print(sum==b);
+    }
+}

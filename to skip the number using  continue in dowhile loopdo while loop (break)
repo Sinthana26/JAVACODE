@@ -1,0 +1,16 @@
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+		int num=1;
+		do{
+		    if(num==5 && num==8){
+        n++;
+        continue;
+        }
+		    System.out.println(num);
+		    num++;
+		}
+		while(num<11);
+		}
+	}z

@@ -1,0 +1,26 @@
+import java.util.*;
+public class basic{
+    public static int factorial(int rem)
+    {
+        int n = 1;
+        while(rem!=0){
+            n*=rem;
+            rem--;
+        }
+        return n;
+    }
+    public static void main(String[] args) {
+        Scanner io = new Scanner(System.in);
+        int num = io.nextInt();
+        int original=num;
+        int sum = 0;
+        while(num!=0)
+        {
+            int rem = num%10;
+            sum+=factorial(rem);
+            num/=10;
+        }
+        System.out.println(sum==original);
+    }
+    
+}

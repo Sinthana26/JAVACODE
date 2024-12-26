@@ -1,0 +1,18 @@
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc =new Scanner(System.in);
+	     System.out.println("Enter no1:");
+	     int a=sc.nextInt();
+	     System.out.println("Enter no2:");
+	     int b=sc.nextInt();
+	     int c=addTwoNumbers(a,b);
+	     System.out.println("The sum:" + c);
+	     
+  }
+  public static int addTwoNumbers(int a,int b){
+      return a+b;
+      
+  }
+}

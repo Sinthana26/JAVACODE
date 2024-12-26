@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class SwapAdjacent {
+    public static void main(String[] args) {
+        Scanner io = new Scanner(System.in);
+        int num = io.nextInt();
+        int arr[] = new int[num];
+        for(int i =0; i< num; i++)
+        {
+            arr[i] = io.nextInt(); 
+        }
+        int a = 0; 
+        int b = a+1;
+        while (a<=num-2) { 
+            int temp = arr[a];
+            arr[a] = arr[b];
+            arr[b] = temp;
+            a+=2;
+            b=a+1;       
+        }
+        for (int i = 0; i < num; i++) {
+            System.out.print(arr[i]+" ");
+        }
+    }
+}

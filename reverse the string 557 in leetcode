@@ -1,0 +1,20 @@
+import java.util.*;
+public class  Main{
+    public static void main(String[] args) {
+         String s="subakamatchi m";
+         System.out.println("The input string is:"+" " +s);
+        StringTokenizer st  = new StringTokenizer(s);
+        StringBuilder res= new StringBuilder();
+        int in=1;
+        for(int i=0;i<s.length();i++){
+            while(st.hasMoreTokens()){
+                String word=st.nextToken();
+                StringBuilder result=new StringBuilder(word);
+                res.append(result.reverse().toString()).append(" ");
+                System.out.print(result+" ");
+          
+        }
+        
+        }
+    }
+}

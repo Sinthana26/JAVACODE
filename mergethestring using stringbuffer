@@ -1,0 +1,26 @@
+public class Main{
+    public static void main(String[] args) {
+        // Input strings
+        String str1 = "hyderabad";
+        String str2 = "chennai";
+
+        // Find the length of the longest string
+        int maxLength = Math.max(str1.length(), str2.length());
+
+        // StringBuffer to store the merged result
+        StringBuffer mergedString = new StringBuffer();
+
+        // Merge the strings alternately
+        for (int i = 0; i < maxLength; i++) {
+            if (i < str1.length()) {
+                mergedString.append(str1.charAt(i));
+            }
+            if (i < str2.length()) {
+                mergedString.append(str2.charAt(i));
+            }
+        }
+
+        // Output the merged string
+        System.out.println("Merged String: " + mergedString.toString());
+    }
+}

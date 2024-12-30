@@ -1,0 +1,10 @@
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner io=new Scanner(System.in);
+		String s=io.nextLine();
+		String arr[]=s.split("\\s+");
+		System.out.println(arr.length);
+	}
+}

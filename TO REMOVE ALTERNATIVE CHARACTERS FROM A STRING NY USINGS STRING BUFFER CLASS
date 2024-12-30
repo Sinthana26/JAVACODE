@@ -1,0 +1,12 @@
+public class Main {
+    public static void main(String[] args) {
+        String input = "HYDERABAD";
+        System.out.println("Original String: " + input);
+        StringBuffer s = new StringBuffer(input);
+        for (int i = 1; i < s.length(); i++) {
+            s.deleteCharAt(i);
+        }
+        System.out.println("String after removing alternate characters: " + s);
+    }
+}
+

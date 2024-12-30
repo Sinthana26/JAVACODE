@@ -1,0 +1,17 @@
+import java.util.*;
+class c1{
+   private int x;
+   public void setx(int m){
+        this.x=m;
+    }
+     public int getx(){
+        return x;
+    }
+}
+class Main{
+public static void main (String[] args){
+      c1   obj = new c1();
+        obj.setx(10);
+System.out.println(obj.getx());
+}
+}

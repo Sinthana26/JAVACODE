@@ -1,0 +1,19 @@
+import java.util.*;
+ class addTwoNumbers{
+    int add2(int a,int b){
+        System.out.println(a+b);
+        return a+b;
+    }
+    float add2(float a,float b){
+        System.out.println(a+b);
+        return a+b;
+    }
+}
+public class Main
+{
+	public static void main(String[] args) {
+	   addTwoNumbers ad = new addTwoNumbers();
+	   ad.add2(50,10);
+	   ad.add2(2.5f,4.5f);
+	}
+}

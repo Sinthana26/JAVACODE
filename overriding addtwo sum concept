@@ -1,0 +1,32 @@
+import java.util.*;
+ class addTwoNumbers{
+    int add2(int a,int b){
+        System.out.println("with super integer add method");
+        System.out.println(a+b);
+        return a+b;
+    }
+    float add2(float a,float b){
+        System.out.println("with super float add method ");
+        System.out.println(a+b);
+        return a+b;
+    }
+}
+class anotherclass extends addTwoNumbers{
+    @Override
+    int add2(int a,int b){
+         System.out.println("with sub class method");
+        System.out.println(a+b);
+        return a+b;
+    }
+    
+}
+public class Main
+{
+	public static void main(String[] args) {
+	   addTwoNumbers ad = new addTwoNumbers();
+	   anotherclass ds=new anotherclass();
+	   ad.add2(50,10);
+	   ad.add2(2.5f,4.5f);
+	   ds.add2(8,9);
+	}
+}

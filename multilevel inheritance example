@@ -1,0 +1,24 @@
+import java.util.*;
+class sinth{
+    void eat() {
+        System.out.println("This girl is cute.");
+    }
+}
+class sudhar extends sinth {
+    void walk() {
+        System.out.println("This boy is gentle.");
+    }
+}
+class yal extends sudhar{
+    void dance() {
+        System.out.println("The dance lover.");
+    }
+}
+public class Main{
+    public static void main(String[] args) {
+        yal obj = new yal();
+        obj.eat();
+        obj.walk();
+        obj.dance();
+    }
+}

@@ -1,0 +1,38 @@
+import java.util.*;
+class BankAccount{
+    int deposit(int amt,int dep,int with){
+        System.out.println("The super class exe:");
+        System.out.println("The super class deposit is:"+(amt+dep));
+        return amt+dep;
+    }
+    int withdraw(int amt,int dep,int with){
+        System.out.println("The super class exe:");
+        System.out.println("The super class withdraw is: "+(amt-with));
+        return amt-with;
+    }
+    
+}
+class SavingsAccount extends BankAccount{
+    @Override
+    int withdraw(int amt,int dep,int with){
+        if(amt<100){
+            System.out.println("The sub class exe:");
+        System.out.println("The super class withdraw is: "+(amt-with));
+        return amt-with;
+    }else{
+        int k=super.withdraw(amt,dep,with);
+        return k;
+    }
+    
+ }
+}
+public class Main
+{
+	public static void main(String[] args) {
+		BankAccount ba=new BankAccount();
+		SavingsAccount sa = new SavingsAccount();
+		ba.deposit(100,50,20);
+		sa.withdraw(90,20,20);
+		
+  }
+}

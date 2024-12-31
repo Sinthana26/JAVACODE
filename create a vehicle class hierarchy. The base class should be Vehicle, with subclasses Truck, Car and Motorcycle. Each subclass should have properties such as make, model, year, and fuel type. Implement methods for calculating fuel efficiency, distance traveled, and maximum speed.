@@ -1,0 +1,53 @@
+// Write a Java program to create a vehicle class hierarchy. The base class should be Vehicle, with subclasses Truck, Car and Motorcycle. Each subclass should have properties such as make, model, year, and fuel type. Implement methods for calculating fuel efficiency, distance traveled, and maximum speed.
+
+import java.util.*;
+
+class Vehicle 
+
+{
+    String name;
+    String clr;
+    int year;
+
+    
+}
+
+class Truck extends Vehicle {
+    void calculateFuelEfficiency() {
+        name = "Hyundai";
+        clr = "Red";
+        year = 2016;
+        System.out.println("Truck Details: Name = " + name + ", Color = " + clr + ", Year = " + year);
+    }
+}
+
+class Car extends Vehicle {
+    void distanceTraveled() {
+        name = "Benz";
+        clr = "Blue";
+        year = 2010;
+        System.out.println("Car Details: Name = " + name + ", Color = " + clr + ", Year = " + year);
+    }
+}
+
+class Motorcycle extends Vehicle {
+    void maximumSpeed() {
+        name = "Reno";
+        clr = "Green";
+        year = 2008;
+        System.out.println("Motorcycle Details: Name = " + name + ", Color = " + clr + ", Year = " + year);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Truck truck = new Truck();
+        truck.calculateFuelEfficiency();
+
+        Car car = new Car();
+        car.distanceTraveled();
+
+        Motorcycle motorcycle = new Motorcycle();
+        motorcycle.maximumSpeed();
+    }
+}

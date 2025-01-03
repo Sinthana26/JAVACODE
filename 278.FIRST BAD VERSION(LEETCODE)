@@ -1,0 +1,20 @@
+
+
+public class Solution extends VersionControl {
+    public int firstBadVersion(int n) {
+        
+        int low = 1;            // Start of the range
+        int high = n;           // End of the range
+
+        while (low <= high) {   // Continue until low crosses high
+            int mid = low + (high - low) / 2; // Calculate mid safely to avoid overflow
+
+            if (isBadVersion(mid)) {
+                high = mid - 1; // Search in the left half
+            } else {
+                low = mid + 1; // Search in the right half
+            }
+        }
+        return low; // When the loop ends, low points to the first bad version
+    }
+}  

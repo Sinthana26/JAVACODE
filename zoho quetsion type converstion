@@ -1,0 +1,11 @@
+class Main {
+    public static void main(String[] args) {
+        String str1 = "1024";
+        String str2 = "-10";
+        int num1 = Integer.parseInt(str1);
+        int num2 = Integer.parseInt(str2);
+        int res= num1 + num2;
+        String output = String.valueOf(res);
+        System.out.println(output);
+    }
+}
